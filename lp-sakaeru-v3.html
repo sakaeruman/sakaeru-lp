@@ -824,7 +824,7 @@
     }
   }
 
-  /* JS-based mobile class (Wix iframe fallback: viewport != device width) */
+  /* JS-based mobile class (Wix iframe fallback: screen.width detects actual device, not iframe) */
   html.is-mobile .side-nav { display: none !important; }
   html.is-mobile .mobile-header { display: flex !important; }
   html.is-mobile .content-header { display: none !important; }
@@ -839,17 +839,24 @@
     width: 100% !important;
     border-radius: 0 !important;
     box-shadow: none !important;
+    background: transparent !important;
   }
-  html.is-mobile .sec { padding: 48px 20px !important; }
-  html.is-mobile .sec--80 { padding-top: 56px !important; padding-bottom: 56px !important; }
+  html.is-mobile .sec { padding: 40px 16px !important; }
+  html.is-mobile .sec--80 { padding-top: 48px !important; padding-bottom: 48px !important; }
   html.is-mobile .sec__title { font-size: 20px !important; }
-  html.is-mobile .hero__overlay { padding: 40px 20px 24px !important; }
+  html.is-mobile .sec__en { font-size: 24px !important; }
+  html.is-mobile body { font-size: 15px !important; }
+  html.is-mobile .hero__overlay { padding: 40px 16px 24px !important; }
   html.is-mobile .hero h1 { font-size: 20px !important; }
-  html.is-mobile .hero__img { height: 280px !important; }
-  html.is-mobile .photo-block { margin: 20px -20px !important; }
+  html.is-mobile .hero__img { height: 260px !important; }
+  html.is-mobile .photo-block { margin: 20px -16px !important; }
   html.is-mobile .profile-row { flex-direction: column !important; gap: 16px !important; }
   html.is-mobile .profile-row__img { width: 100% !important; height: 200px !important; }
   html.is-mobile .num-row { flex-direction: column !important; gap: 12px !important; }
+  html.is-mobile .cta-btn { width: 100% !important; display: block !important; text-align: center !important; }
+  html.is-mobile h3 { font-size: 17px !important; }
+  html.is-mobile .pain-list li { font-size: 14px !important; }
+  html.is-mobile .media-order li { font-size: 14px !important; }
 
   @media print {
     .side-nav {
@@ -1597,12 +1604,20 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 });
 </script>
 
-<!-- Wix iframe responsive fix: detect actual container width, not viewport -->
+<!-- Wix iframe responsive fix: screen.width = actual device width, unaffected by iframe size -->
 <script>
 (function() {
-  var BREAKPOINT = 960;
+  var BREAKPOINT = 768;
+  function getDeviceWidth() {
+    // screen.width returns actual device CSS pixel width even inside an iframe
+    // This is the key fix for Wix: clientWidth returns iframe width (960px+), not device width
+    var screenW = window.screen && window.screen.width;
+    var clientW = document.documentElement.clientWidth || window.innerWidth;
+    // Use the smaller value to be safe (avoids false-desktop on rotated tablets)
+    return Math.min(screenW || clientW, clientW);
+  }
   function applyLayout() {
-    var w = document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
+    var w = getDeviceWidth();
     if (w < BREAKPOINT) {
       document.documentElement.classList.add('is-mobile');
     } else {
