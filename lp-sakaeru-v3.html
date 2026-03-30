@@ -825,6 +825,8 @@
   }
 
   /* JS-based mobile class (Wix iframe fallback: screen.width detects actual device, not iframe) */
+
+  /* ── Layout ── */
   html.is-mobile .side-nav { display: none !important; }
   html.is-mobile .mobile-header { display: flex !important; }
   html.is-mobile .content-header { display: none !important; }
@@ -841,22 +843,69 @@
     box-shadow: none !important;
     background: transparent !important;
   }
-  html.is-mobile .sec { padding: 40px 16px !important; }
-  html.is-mobile .sec--80 { padding-top: 48px !important; padding-bottom: 48px !important; }
-  html.is-mobile .sec__title { font-size: 20px !important; }
-  html.is-mobile .sec__en { font-size: 24px !important; }
-  html.is-mobile body { font-size: 15px !important; }
-  html.is-mobile .hero__overlay { padding: 40px 16px 24px !important; }
-  html.is-mobile .hero h1 { font-size: 20px !important; }
-  html.is-mobile .hero__img { height: 260px !important; }
-  html.is-mobile .photo-block { margin: 20px -16px !important; }
-  html.is-mobile .profile-row { flex-direction: column !important; gap: 16px !important; }
-  html.is-mobile .profile-row__img { width: 100% !important; height: 200px !important; }
-  html.is-mobile .num-row { flex-direction: column !important; gap: 12px !important; }
-  html.is-mobile .cta-btn { width: 100% !important; display: block !important; text-align: center !important; }
-  html.is-mobile h3 { font-size: 17px !important; }
+
+  /* ── Typography ── */
+  html.is-mobile body { font-size: 15px !important; line-height: 1.85 !important; }
+  html.is-mobile h3 { font-size: 18px !important; }
+  html.is-mobile .sec__title { font-size: 22px !important; }
+  html.is-mobile .sec__en { font-size: 26px !important; }
   html.is-mobile .pain-list li { font-size: 14px !important; }
   html.is-mobile .media-order li { font-size: 14px !important; }
+  html.is-mobile .price-row { font-size: 14px !important; }
+  html.is-mobile .faq-q { font-size: 15px !important; }
+  html.is-mobile .faq-a { font-size: 14px !important; }
+
+  /* ── Sections / spacing ── */
+  html.is-mobile .sec { padding: 40px 16px !important; }
+  html.is-mobile .sec--48 { padding-top: 32px !important; padding-bottom: 32px !important; }
+  html.is-mobile .sec--80 { padding-top: 48px !important; padding-bottom: 48px !important; }
+
+  /* ── Hero ── */
+  html.is-mobile .hero__img { height: 260px !important; width: 100% !important; }
+  html.is-mobile .hero__overlay { padding: 40px 16px 24px !important; }
+  html.is-mobile .hero h1 { font-size: 21px !important; }
+
+  /* ── Images full-width ── */
+  html.is-mobile .photo-block { margin: 20px -16px !important; }
+  html.is-mobile .photo-block img { height: auto !important; }
+  html.is-mobile img { max-width: 100% !important; }
+
+  /* ── Profile ── */
+  html.is-mobile .profile-row { flex-direction: column !important; gap: 0 !important; }
+  html.is-mobile .profile-row__img { width: 100% !important; height: 220px !important; border-radius: 0 !important; margin: 0 -16px 20px !important; width: calc(100% + 32px) !important; }
+  html.is-mobile .num-row { flex-direction: column !important; gap: 12px !important; }
+
+  /* ── Remove card-like borders/backgrounds ── */
+  html.is-mobile .price-group {
+    border: none !important;
+    border-bottom: 1px solid #e0ddd8 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 20px 0 !important;
+    background: transparent !important;
+  }
+  html.is-mobile .price-group:last-of-type { border-bottom: none !important; }
+  html.is-mobile .price-group__title--main {
+    background: none !important;
+    color: #1E3A5F !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+  }
+  html.is-mobile .voice-placeholder { border: none !important; padding: 16px 0 !important; }
+
+  /* ── CTA buttons full-width ── */
+  html.is-mobile .cta-btn {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 16px 0 !important;
+    box-sizing: border-box !important;
+  }
+  html.is-mobile .cta-block { padding: 24px 0 0 !important; }
+
+  /* ── Footer CTA ── */
+  html.is-mobile .footer-cta { padding: 48px 16px !important; }
+  html.is-mobile .footer-cta h2 { font-size: 20px !important; }
 
   @media print {
     .side-nav {
@@ -876,17 +925,60 @@
     }
   }
 
-  @media (max-width: 640px) {
-    .sec { padding: 48px 20px; }
-    .sec--80 { padding-top: 56px; padding-bottom: 56px; }
-    .sec__title { font-size: 20px; }
-    .hero__overlay { padding: 40px 20px 24px; }
-    .hero h1 { font-size: 20px; }
-    .hero__img { height: 280px; }
-    .photo-block { margin: 20px -20px; }
+  @media (max-width: 768px) {
+    /* Typography */
+    body { font-size: 15px; line-height: 1.85; }
+    h3 { font-size: 18px; }
+    .sec__title { font-size: 22px; }
+    .sec__en { font-size: 26px; }
+    .pain-list li { font-size: 14px; }
+    .media-order li { font-size: 14px; }
+    .price-row { font-size: 14px; }
+
+    /* Sections */
+    .sec { padding: 40px 16px; }
+    .sec--48 { padding-top: 32px; padding-bottom: 32px; }
+    .sec--80 { padding-top: 48px; padding-bottom: 48px; }
+
+    /* Hero */
+    .hero__img { height: 260px; width: 100%; }
+    .hero__overlay { padding: 40px 16px 24px; }
+    .hero h1 { font-size: 21px; }
+
+    /* Images full-width */
+    .photo-block { margin: 20px -16px; }
+    .photo-block img { height: auto; }
+
+    /* Profile */
     .profile-row { flex-direction: column; gap: 16px; }
     .profile-row__img { width: 100%; height: 200px; }
     .num-row { flex-direction: column; gap: 12px; }
+
+    /* Remove card borders */
+    .price-group {
+      border: none;
+      border-bottom: 1px solid #e0ddd8;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 20px 0;
+      background: transparent;
+    }
+    .price-group:last-of-type { border-bottom: none; }
+    .price-group__title--main {
+      background: none;
+      color: #1E3A5F;
+      padding: 0;
+      font-size: 18px;
+    }
+    .voice-placeholder { border: none; padding: 16px 0; }
+
+    /* CTA full-width */
+    .cta-btn { display: block; width: 100%; text-align: center; padding: 16px 0; box-sizing: border-box; }
+    .cta-block { padding: 24px 0 0; }
+
+    /* Footer */
+    .footer-cta { padding: 48px 16px; }
+    .footer-cta h2 { font-size: 20px; }
   }
 </style>
 </head>
