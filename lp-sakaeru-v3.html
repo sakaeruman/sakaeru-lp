@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ひじき漁師さかえる｜小さな商売のマーケティング顧問</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  body {
+    font-family: 'YuGothic', 'Yu Gothic', 'Hiragino Sans', sans-serif;
+    color: #1a1a1a;
+    background: #EDEBE7;
+    line-height: 2.0;
+    font-size: 15px;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  img, video, iframe, table {
+    max-width: 100%;
+  }
+  .sec p { margin-bottom: 20px; }
+  .sec p:last-child { margin-bottom: 0; }
+
+  a { color: #4A90D9; }
+
+  /* ══════════════════════════════════════
+     PC LAYOUT: Left Nav + Right Content
+  ══════════════════════════════════════ */
+
+  .layout {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ── Left Sticky Nav (PC) ── */
+  .side-nav {
+    position: sticky;
+    top: 0;
+    width: 360px;
+    min-width: 360px;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 48px 36px 32px;
+    overflow-y: auto;
+    z-index: 100;
+    flex-shrink: 0;
+  }
+
+  .side-nav__logo {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1E3A5F;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .side-nav__logo-sub {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 36px;
+    display: block;
+  }
+
+  .side-nav__hr {
+    border: none;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 0 0 24px;
+  }
+
+  .side-nav__links {
+    list-style: none;
+    padding: 0;
+    flex: 1;
+  }
+  .side-nav__links li {
+    margin-bottom: 20px;
+  }
+  .side-nav__links a {
+    text-decoration: none;
+    display: block;
+  }
+  .side-nav__links .nav-ja {
+    display: block;
+    font-size: 13px;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1.3;
+  }
+  .side-nav__links .nav-en {
+    display: block;
+    font-size: 30px;
+    font-weight: 900;
+    color: #1E3A5F;
+    opacity: 0.13;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+  }
+  .side-nav__links a:hover .nav-en {
+    opacity: 0.35;
+  }
+
+  .side-nav__cta-area {
+    margin-top: auto;
+    padding-top: 24px;
+  }
+  .side-nav__cta-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .side-nav__cta {
+    display: block;
+    text-align: center;
+    background: #5B8C3E;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 0;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .side-nav__cta:hover { background: #b5402a; }
+
+  /* ── Right Content Area (PC) ── */
+  .main-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 40px 0;
+  }
+
+  .content-column {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    overflow-x: hidden;
+  }
+
+  /* ── Mobile Header ── */
+  .mobile-header {
+    display: none;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 56px;
+    background: #fff;
+    z-index: 200;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+  .mobile-header__logo {
+    font-size: 13px;
+    font-weight: bold;
+    color: #1E3A5F;
+    letter-spacing: 0.5px;
+  }
+  .mobile-header__cta {
+    display: inline-block;
+    background: #5B8C3E;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 99px;
+    text-decoration: none;
+  }
+
+  /* ── Content Header (inside phone screen, PC only) ── */
+  .content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    background: #fff;
+  }
+  .content-header__logo {
+    font-size: 13px;
+    font-weight: bold;
+    color: #1E3A5F;
+    letter-spacing: 0.5px;
+  }
+  .content-header__cta {
+    display: inline-block;
+    background: #5B8C3E;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 18px;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .content-header__cta:hover { background: #b5402a; }
+
+  /* ══════════════════════════════════════
+     SECTIONS
+  ══════════════════════════════════════ */
+
+  .sec {
+    padding: 64px 32px;
+  }
+  .sec--48 { padding-top: 48px; padding-bottom: 48px; }
+  .sec--80 { padding-top: 80px; padding-bottom: 80px; }
+  .sec--cream { background: #F8F6F1; }
+
+  .sec__en {
+    font-size: 32px;
+    font-weight: 900;
+    color: #1E3A5F;
+    opacity: 0.10;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .sec__title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .sec__lead {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 28px;
+  }
+
+  .divider {
+    border: none;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 0;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero__img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+  }
+  .hero__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(44,74,94,0.92));
+    padding: 48px 32px 32px;
+    color: #fff;
+  }
+  .hero__tagline {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .hero h1 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+
+  /* ── Body text ── */
+  p { margin-bottom: 16px; }
+  p:last-child { margin-bottom: 0; }
+
+  strong { color: #1E3A5F; font-weight: bold; }
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  /* ── Pain list ── */
+  .pain-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+  .pain-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .pain-list li:last-child { border-bottom: none; }
+
+  /* ── Media order ── */
+  .media-order {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+  }
+  .media-order li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .media-order li:last-child { border-bottom: none; }
+  .media-order .order-num {
+    color: #1E3A5F;
+    font-weight: bold;
+  }
+  .media-order .order-sub {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+  }
+
+  /* ── Service cards ── */
+  .svc-card {
+    margin-bottom: 28px;
+  }
+  .svc-card:last-child { margin-bottom: 0; }
+  .svc-card__num {
+    font-size: 32px;
+    font-weight: 900;
+    color: #1E3A5F;
+    opacity: 0.12;
+    line-height: 1;
+  }
+  .svc-card__label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #1E3A5F;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .svc-card h3 {
+    margin-top: 4px;
+  }
+  .svc-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+  }
+
+  /* ── Video block ── */
+  .video-block {
+    margin: 24px 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  .video-block iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ── Media Map ── */
+  .media-map {
+    margin: 32px -16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .media-map__intro {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 16px;
+    padding: 0 16px;
+  }
+  .media-map__table {
+    width: 100%;
+    min-width: 340px;
+    border-collapse: collapse;
+    font-size: 10px;
+    line-height: 1.3;
+    table-layout: fixed;
+  }
+  .media-map__table colgroup .col-label { width: 44px; }
+  .media-map__table th {
+    background: #1E3A5F;
+    color: #fff;
+    font-weight: 700;
+    padding: 6px 2px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 9px;
+  }
+  .media-map__table th:first-child {
+    background: #2a4a6f;
+    width: 44px;
+    font-size: 8px;
+  }
+  .media-map__table td {
+    padding: 4px 2px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #e0ddd8;
+  }
+  .media-map__layer {
+    font-weight: 900;
+    font-size: 9px;
+    color: #fff;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.05em;
+    padding: 6px 3px;
+  }
+  .media-map__layer--brand { background: #E8963E; }
+  .media-map__layer--content { background: #1E3A5F; }
+  .media-map__layer--cv { background: #5B8C3E; }
+  .mm-tag {
+    display: inline-block;
+    padding: 2px 4px;
+    margin: 1px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .mm-tag--brand { background: #E8963E; }
+  .mm-tag--content { background: #1E3A5F; }
+  .mm-tag--cv { background: #5B8C3E; }
+  .mm-tag--span {
+    display: block;
+    margin: 2px 0;
+    padding: 3px 4px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+  }
+  .media-map__note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 12px;
+    padding: 0 16px;
+  }
+
+  /* ── Photo block ── */
+  .photo-block {
+    margin: 24px -32px;
+  }
+  .photo-block img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ── Profile ── */
+  .profile-row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .profile-row__img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .profile-row__text {
+    flex: 1;
+  }
+  .profile-row__name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .profile-row__sub {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+
+  /* ── Numbers ── */
+  .num-row {
+    display: flex;
+    gap: 16px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  .num-item {
+    flex: 1;
+    min-width: 120px;
+    border-left: 2px solid #1E3A5F;
+    padding-left: 12px;
+  }
+  .num-item__val {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1E3A5F;
+    line-height: 1.2;
+  }
+  .num-item__label {
+    font-size: 12px;
+    color: #666;
+  }
+
+  /* ── Pricing ── */
+  .price-group {
+    border: 2px solid #e0ddd8;
+    padding: 20px 16px 16px;
+    margin-bottom: 20px;
+    background: #fff;
+  }
+  .price-group--main {
+    border-color: #1E3A5F;
+  }
+  .price-group__title {
+    font-size: 16px;
+    font-weight: 900;
+    color: #1E3A5F;
+    margin-bottom: 4px;
+  }
+  .price-group__title--main {
+    display: inline-block;
+    background: #1E3A5F;
+    color: #fff;
+    padding: 2px 10px;
+    margin-bottom: 8px;
+  }
+  .price-group__sub {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+  }
+  .price-group-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 8px;
+    margin-top: 32px;
+  }
+  .price-group-label:first-child { margin-top: 0; }
+
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-row .label { flex: 1; }
+  .price-row .label small {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    font-weight: normal;
+  }
+  .price-row .price {
+    font-weight: bold;
+    color: #1E3A5F;
+    white-space: nowrap;
+    margin-left: 16px;
+  }
+  .recommend-badge {
+    display: inline-block;
+    font-size: 11px;
+    color: #fff;
+    background: #5B8C3E;
+    padding: 1px 8px;
+    border-radius: 2px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .price-note {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.8;
+    margin-top: 16px;
+  }
+
+  /* ── Calendar (Gantt style) ── */
+  .cal-chart {
+    margin: 24px 0 20px;
+  }
+  .cal-months {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 6px;
+  }
+  .cal-months span {
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    font-weight: 500;
+  }
+  .cal-bars {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2px 0;
+  }
+  .cal-bar {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.05em;
+  }
+  .cal-bar--busy { background: #5B8C3E; }
+  .cal-bar--mid { background: #7BAE5E; }
+  .cal-bar--free { background: #1E3A5F; }
+  /* 各バーのgrid配置 */
+  .cal-row-busy-1 { grid-column: 1 / 3; grid-row: 1; }
+  .cal-row-mid   { grid-column: 3 / 5; grid-row: 1; }
+  .cal-row-free   { grid-column: 5 / 11; grid-row: 1; }
+  .cal-row-busy-2 { grid-column: 11 / 13; grid-row: 1; }
+  .cal-desc {
+    margin-top: 20px;
+  }
+  .cal-desc dt {
+    font-size: 13px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-top: 14px;
+    padding-left: 14px;
+    position: relative;
+  }
+  .cal-desc dt::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+  }
+  .cal-desc dt.dt-busy::before { background: #5B8C3E; }
+  .cal-desc dt.dt-mid::before { background: #7BAE5E; }
+  .cal-desc dt.dt-free::before { background: #1E3A5F; }
+  .cal-desc dd {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.8;
+    margin: 4px 0 0 14px;
+  }
+
+  /* ── PDCA box ── */
+  .pdca-box {
+    border-left: 3px solid #1E3A5F;
+    padding: 16px 20px;
+    margin: 20px 0;
+    background: #F8F6F1;
+  }
+  .pdca-box__title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1E3A5F;
+    margin-bottom: 8px;
+  }
+  .pdca-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .pdca-box li {
+    padding: 3px 0 3px 16px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .pdca-box li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: #1E3A5F;
+  }
+
+  /* ── Target / Not-target ── */
+  .target-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .target-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .target-list li:last-child { border-bottom: none; }
+
+  /* ── FAQ ── */
+  .faq-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #1a1a1a;
+  }
+  .faq-a {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
+
+  /* ── CTA section ── */
+  .cta-block {
+    text-align: center;
+    padding: 28px 0 0;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: #5B8C3E;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 14px 40px;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: background 0.2s;
+    line-height: 1.5;
+  }
+  .cta-btn:hover { background: #b5402a; }
+  .cta-btn--sub {
+    background: transparent;
+    color: #1E3A5F;
+    border: 1px solid #1E3A5F;
+  }
+  .cta-btn--sub:hover { background: #F8F6F1; }
+
+  .cta-caption {
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+  }
+
+  /* ── Footer CTA ── */
+  .footer-cta {
+    background: #1E3A5F;
+    color: #fff;
+    text-align: center;
+    padding: 64px 32px;
+  }
+  .footer-cta h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  .footer-cta p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 24px;
+  }
+  .footer-cta .cta-btn {
+    background: #5B8C3E;
+    margin-bottom: 16px;
+  }
+  .footer-cta .cta-btn:hover { background: #b5402a; }
+  .footer-links {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+  .footer-links a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .footer-links a:hover { color: #fff; }
+
+  /* ── Voice placeholder ── */
+  .voice-placeholder {
+    border: 1px solid #e0e0e0;
+    padding: 40px 24px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+  }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════════════ */
+
+  @media (max-width: 960px) {
+    .side-nav { display: none; }
+    .mobile-header { display: flex; }
+    .content-header { display: none; }
+    .layout {
+      display: block;
+    }
+    .main-content {
+      margin-left: 0;
+      padding: 0;
+      display: block;
+    }
+    .content-column {
+      max-width: 100%;
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+
+  /* JS-based mobile class (Wix iframe fallback: viewport != device width) */
+  html.is-mobile .side-nav { display: none !important; }
+  html.is-mobile .mobile-header { display: flex !important; }
+  html.is-mobile .content-header { display: none !important; }
+  html.is-mobile .layout { display: block !important; }
+  html.is-mobile .main-content {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  html.is-mobile .content-column {
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  html.is-mobile .sec { padding: 48px 20px !important; }
+  html.is-mobile .sec--80 { padding-top: 56px !important; padding-bottom: 56px !important; }
+  html.is-mobile .sec__title { font-size: 20px !important; }
+  html.is-mobile .hero__overlay { padding: 40px 20px 24px !important; }
+  html.is-mobile .hero h1 { font-size: 20px !important; }
+  html.is-mobile .hero__img { height: 280px !important; }
+  html.is-mobile .photo-block { margin: 20px -20px !important; }
+  html.is-mobile .profile-row { flex-direction: column !important; gap: 16px !important; }
+  html.is-mobile .profile-row__img { width: 100% !important; height: 200px !important; }
+  html.is-mobile .num-row { flex-direction: column !important; gap: 12px !important; }
+
+  @media print {
+    .side-nav {
+      display: flex !important;
+      position: absolute;
+      height: auto;
+    }
+    .mobile-header { display: none !important; }
+    .content-header { display: block !important; }
+    .main-content {
+      margin-left: 360px !important;
+      padding-top: 0 !important;
+    }
+    .content-column {
+      max-width: 540px !important;
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .sec { padding: 48px 20px; }
+    .sec--80 { padding-top: 56px; padding-bottom: 56px; }
+    .sec__title { font-size: 20px; }
+    .hero__overlay { padding: 40px 20px 24px; }
+    .hero h1 { font-size: 20px; }
+    .hero__img { height: 280px; }
+    .photo-block { margin: 20px -20px; }
+    .profile-row { flex-direction: column; gap: 16px; }
+    .profile-row__img { width: 100%; height: 200px; }
+    .num-row { flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ MOBILE HEADER ══ -->
+<header class="mobile-header">
+  <span class="mobile-header__logo">ひじき漁師さかえる<br><small style="font-size:10px; font-weight:500; opacity:0.7;">マーケティング顧問サービス</small></span>
+  <a href="https://lin.ee/rLsdO8vc" target="_blank" rel="noopener" class="mobile-header__cta">LINEで相談</a>
+</header>
+
+<div class="layout">
+
+<!-- ══ LEFT NAV (PC) ══ -->
+<nav class="side-nav">
+  <div class="side-nav__logo">ひじき漁師さかえる</div>
+  <span class="side-nav__logo-sub">マーケティング顧問</span>
+  <hr class="side-nav__hr">
+
+  <ul class="side-nav__links">
+    <li>
+      <a href="#production">
+        <span class="nav-ja">#認知を倍にする方法</span>
+        <span class="nav-en">FACEBOOK</span>
+      </a>
+    </li>
+    <li>
+      <a href="#media-design">
+        <span class="nav-ja">#メディア設計</span>
+        <span class="nav-en">MEDIA DESIGN</span>
+      </a>
+    </li>
+    <li>
+      <a href="#advisor">
+        <span class="nav-ja">#マーケティング顧問</span>
+        <span class="nav-en">ADVISOR</span>
+      </a>
+    </li>
+    <li>
+      <a href="#about">
+        <span class="nav-ja">#さかえるについて</span>
+        <span class="nav-en">ABOUT</span>
+      </a>
+    </li>
+    <li>
+      <a href="#plan">
+        <span class="nav-ja">#料金プラン</span>
+        <span class="nav-en">PLAN</span>
+      </a>
+    </li>
+    <li>
+      <a href="#calendar">
+        <span class="nav-ja">#対応時期</span>
+        <span class="nav-en">CALENDAR</span>
+      </a>
+    </li>
+    <li>
+      <a href="#faq">
+        <span class="nav-ja">#よくある質問</span>
+        <span class="nav-en">FAQ</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="side-nav__cta-area">
+    <hr class="side-nav__hr">
+    <p class="side-nav__cta-label">相談・お問い合わせ</p>
+    <a href="https://lin.ee/rLsdO8vc" target="_blank" rel="noopener" class="side-nav__cta">LINEで相談する</a>
+  </div>
+</nav>
+
+<!-- ══ MAIN CONTENT ══ -->
+<main class="main-content">
+<div class="content-column">
+
+  <!-- ──── Content Header (PC phone-screen style) ──── -->
+  <div class="content-header">
+    <span class="content-header__logo">ひじき漁師さかえる<br><small style="font-size:10px; font-weight:500; opacity:0.7;">マーケティング顧問サービス</small></span>
+    <a href="https://lin.ee/rLsdO8vc" target="_blank" rel="noopener" class="content-header__cta">LINEで相談</a>
+  </div>
+
+  <!-- ──── HERO ──── -->
+  <section class="hero" id="top">
+    <img src="https://static.wixstatic.com/media/fbfa5e_d249ceffb4054b28a4311b9ddbf5fadb~mv2.jpg" alt="島と海を背景に立つさかえる" class="hero__img">
+    <div class="hero__overlay">
+      <p class="hero__tagline">Instagramで発信しているなら、今すぐやろう</p>
+      <h1>まだFacebookページ<br>作ってないの？</h1>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       LP1: Facebook × サイト制作・動画制作 (from lp-front-product.html)
+  ══════════════════════════════════════════════════ -->
+
+  <section class="sec" id="production">
+    <p class="sec__en">FACEBOOK</p>
+    <h2 class="sec__title">ほぼノーコストで認知を倍にする方法</h2>
+    <p class="sec__lead">InstagramリールをFacebookに流すだけ。自動連携すればOKです。</p>
+
+    <div class="photo-block">
+      <img src="https://static.wixstatic.com/media/fbfa5e_668f18d719ac4d44a90385bc1515bf23~mv2.jpg" alt="港でひじきの天日干し" loading="lazy">
+    </div>
+
+    <p>InstagramとFacebookは同じMeta社のサービスです。<br>連携すれば、<strong>1つの投稿が2つのプラットフォームに同時に届きます</strong>。<br>「Facebookはオワコンでしょ」と思って放置しているなら、タダで取れるリーチを捨てているのと同じこと...。</p>
+
+    <p>Facebookユーザーは年齢層が高く、購買力があります。<br>SNS経由のサイトアクセスと購入率で見ると、<strong>Facebookは実はInstagramより強いケースが多い</strong>です。<br>「見てるだけ」の層が少なく、「買う」層が厚いのです。</p>
+
+    <p><strong>設定は一度だけでOK。</strong><br>Instagramに投稿すれば、リール・フィード・ストーリーズがFacebookページに自動反映されます。追加の手間なく配信先が倍になります。</p>
+
+    <p>実店舗や商品を持っている人ほど相性が良いのがMetaのサービスの特徴。<br>Facebookページには住所・地図・営業時間が設定でき、位置情報と紐づいた検索で表示されますので優先的に対応することをおすすめします。</p>
+  </section>
+
+  <hr class="divider">
+
+  <section class="sec sec--cream">
+    <h3>Facebookページ、これだけやっとけリスト</h3>
+
+    <ul class="pain-list">
+      <li>
+        <strong>1. ビジネス用Facebookページを作る</strong><br>
+        <span style="font-size:14px; color:#666;">個人アカウントとは別物ですので注意。インサイト（分析）、CTAボタン、広告配信が全部使えます。無料、5分でできます。</span>
+      </li>
+      <li>
+        <strong>2. プロフィールとCTA（訴求内容）を直接的に書く</strong><br>
+        <span style="font-size:14px; color:#666;">「何をしている人で」「何を売っていて」「どうすれば買えるのか」。遠回しにしないようにしましょう。「興味があればDMください」ではなく「こちらから購入できます」とリンクを貼る等。お客さんを迷わせないようにストレートに書くことが大切です。</span>
+      </li>
+      <li>
+        <strong>3. Instagram連携設定をする</strong><br>
+        <span style="font-size:14px; color:#666;">Instagramの設定 → アカウント → リンク済みのアカウント → Facebook からFacebookページを選ぶだけです。リールやフィード投稿が自動でFacebookページにも配信されます。</span>
+      </li>
+      <li>
+        <strong>4. リール（ショート動画）を使う</strong><br>
+        <span style="font-size:14px; color:#666;">リールはフォロワー以外にも届く唯一のフォーマットです。動画を最後まで見てくれた人はすでに関心が高いです。テキスト投稿では出会えない層に届きます。</span>
+      </li>
+      <li>
+        <strong>5. Facebookリールは「初動1秒」が勝負</strong><br>
+        <span style="font-size:14px; color:#666;">Instagramリールは最初の3秒が大事と言われますが、Facebookリールはさらにシビアです。フィードに流れてきた瞬間の1秒で「見る・見ない」が決まります。冒頭に結論やインパクトのあるカットを持ってきてください。</span>
+      </li>
+    </ul>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════════════════
+       LP2: メディア設計 (from lp-media-design.html)
+  ══════════════════════════════════════════════════ -->
+
+  <section class="sec sec--cream" id="media-design">
+    <p class="sec__en">MEDIA DESIGN</p>
+    <h2 class="sec__title">メディア設計から始めよう</h2>
+    <p class="sec__lead">フォロワーとインプレッションばかり追っていませんか。SNSを頑張る前に、やることがあります。</p>
+
+    <div class="photo-block">
+      <img src="https://static.wixstatic.com/media/fbfa5e_71c64515278b4b4d92829c9d09262f25~mv2.jpg" alt="島を背景に語るさかえる" loading="lazy">
+    </div>
+
+    <h3>頑張っているのに成果が出ない</h3>
+
+    <ul class="pain-list">
+      <li><strong>毎日投稿しても売上に繋がらない</strong></li>
+      <li><strong>バズっても翌月には元通り</strong></li>
+      <li><strong>フォロワーやインプレッションは増えても売上や具体的ないい縁につながらない</strong></li>
+      <li><strong>何を発信すればいいか分からなくなってきた</strong></li>
+    </ul>
+
+    <p>SNSの使い方の問題ではなく頑張るメディアの順番が逆になっている人が多いです。とりあえずSNSを頑張ればなんとかなると思って深く考えず、ただ投稿を重ねていても効果は出ないはず。</p>
+  </section>
+
+  <hr class="divider">
+
+  <section class="sec">
+    <h3>なぜ売上に繋がらないか</h3>
+    <p class="sec__lead">多くの人が頑張る順序を間違えている</p>
+
+    <p>「フォロワーを増やす → 商品を紹介する → 売れない」。この順番になっていませんか。そもそも、SNSでフォロワーが多くなくても、SNS発信自体あまりしていなくても売上を立てている事業者がこの世の中の大多数ですよね。オンラインでのマーケティングを頑張ろうと思っていたとしてもあまり焦って拙速にバズりたいと思わないことが大事かなと思います。</p>
+
+    <p><strong>正しい順番は逆です。</strong></p>
+
+    <ul class="media-order">
+      <li>
+        <span class="order-num">1. コンバージョン（商品・サービスページ｜購入や申込）</span>
+        <span class="order-sub">商品・サービスページなど、お客さんが価値を感じて購入や申し込みに至る分かりやすいページがまず必要です。1件の購入や申し込みを得るのにサイトへ何アクセス必要かと言うことも把握していないと、発信の目標が立てられず、穴の空いたバケツに水を注ぐような格好になってしまいます。</span>
+      </li>
+      <li>
+        <span class="order-num">2. コンテンツ（専門性）</span>
+        <span class="order-sub">ブログ・FAQ・解説記事で「この人に頼みたい」と思ってもらえるような価値提供、専門性を伝える必要があります。必要なアクセス数を逆算すれば、どんな記事を何本書くべきかが見えてきます。</span>
+      </li>
+      <li>
+        <span class="order-num">3. ブランディング（認知）</span>
+        <span class="order-sub">SNSは最後でOK。1と2が整っていない状態でインプレッションだけ増やしても「ただバズって終わり」になります。上記の設計があって初めて、認知が売上やいい縁に繋がります。そしてSNSは万能ではないので、オフライン（チラシやリーフレット、名刺）、SNS以外のオンラインマーケティング（古き良きSEOなど）にまず取り組んだ方が効果が出やすかったりします。闇雲に「とりあえずSNS頑張る」はやめましょう。</span>
+      </li>
+    </ul>
+
+    <p>看板だけ立てて店を開けていない状態で、いくら人通りを増やしても意味がありません。</p>
+
+    <p>穴の空いたバケツに水を注いでいるのと同じです。先に穴を塞げば、必要なだけの水を注ぐだけで済むんですよね。</p>
+
+    <p>これはわし自身がひじきを直売する中で学んだことであり、友人ら他の事業者の人たちと日々PDCAを回す中で取り組んできたことです。机上の空論ではなく実体験に基づくものでもあります。</p>
+
+    <div class="video-block">
+      <iframe src="https://www.youtube.com/embed/OgKn-PgGWbg" title="メディア設計について" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="media-map">
+      <p class="media-map__intro">例えば、ひじき漁師さかえるのメディア構成はこうなっています。</p>
+
+      <table class="media-map__table">
+        <colgroup>
+          <col class="col-label">
+          <col><col><col><col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th></th>
+            <th>クチコミ</th>
+            <th>SNS</th>
+            <th>広告&既存メディア</th>
+            <th>SEO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ブランディング層 -->
+          <tr>
+            <td rowspan="2" class="media-map__layer media-map__layer--brand">ブランディング<br>認知</td>
+            <td colspan="4" style="text-align:left; padding:4px;">
+              <span class="mm-tag--span" style="background:#E8963E;">MYメディア（X、Threads、動画）→ 日常や思想を発信</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align:left; padding:4px;">
+              <span class="mm-tag--span" style="background:#4CAF50;">ブログ、Instagram、note</span>
+            </td>
+            <td colspan="2" style="text-align:left; padding:4px;">
+              <span class="mm-tag--span" style="background:#4CAF50;">X記事、note記事（写真と動画埋め込み）</span>
+            </td>
+          </tr>
+          <!-- コンテンツ層 -->
+          <tr>
+            <td rowspan="2" class="media-map__layer media-map__layer--content">コンテンツ<br>専門性</td>
+            <td style="padding:4px;">
+              <span class="mm-tag mm-tag--content">音声<br>(Voicy)</span>
+            </td>
+            <td style="padding:4px;">
+              <span class="mm-tag mm-tag--content">ブログ<br>(文字&キュレーション)</span>
+            </td>
+            <td></td>
+            <td style="padding:4px;">
+              <span class="mm-tag mm-tag--content">Instagram<br>(写真&動画)</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding:4px;">
+              <span class="mm-tag--span" style="background:#1E3A5F;">YouTube｜動画</span>
+            </td>
+            <td colspan="2"></td>
+          </tr>
+          <!-- CV層 -->
+          <tr>
+            <td class="media-map__layer media-map__layer--cv">CV<br>購入<br>申込</td>
+            <td style="padding:4px;">
+              <span class="mm-tag mm-tag--cv">note</span>
+              <span class="mm-tag mm-tag--cv">講演</span><br>
+              <span class="mm-tag mm-tag--cv">コンサルティング</span>
+            </td>
+            <td colspan="2" style="padding:4px;">
+              <span class="mm-tag mm-tag--cv">沖家室ひじき</span><br>
+              <span class="mm-tag mm-tag--cv">季節性野菜の直売</span><br>
+              <span class="mm-tag mm-tag--cv">お野菜定期便</span>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="media-map__note">※ あなたの事業に合わせて、この設計図を一緒につくります。</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="sec sec--cream">
+    <h3>「メディア設計」サービス内容</h3>
+    <p class="sec__lead">設計 → 実装 → 改善の3フェーズ</p>
+
+    <div class="svc-card">
+      <p class="svc-card__label">PHASE 1</p>
+      <h3>現状診断（初回面談）</h3>
+      <p>今どんな発信をしていて、どこに穴があるか確認します。「うちは特殊だから」という方ほど、案外穴の場所は同じだったりします。</p>
+      <p><strong>商品・サービスページなど、お客さんが価値を感じて購入や申し込みに至る分かりやすいページ</strong>の作り込みが甘いことが多く、1件の購入や申し込みを得るのにサイトへ何アクセス必要かと言うことも把握していない人がほとんどです。<br>また、<strong>SNSに取り組む前にできること（SEOやオフラインで効果の出やすいもの）が抜けていることが多い</strong>です。</p>
+    </div>
+
+    <hr class="divider" style="margin: 24px 0;">
+
+    <div class="svc-card">
+      <p class="svc-card__label">PHASE 2</p>
+      <h3>メディア設計</h3>
+      <p>3種類のメディア（ブランディング・コンテンツ・コンバージョン）をあなたの事業に当てはめて、何をどこで誰に届けるか決めます。設計が決まれば、あとは実行するだけになります（と、言いつつ、実行しそれを継続するのが一番難しいんですよね、、、）。</p>
+    </div>
+
+    <hr class="divider" style="margin: 24px 0;">
+
+    <div class="svc-card">
+      <p class="svc-card__label">PHASE 3</p>
+      <h3>実装と継続改善<br><small style="font-size:14px; font-weight:500; color:#666;">（下記「マーケティング顧問」にて対応します）</small></h3>
+      <p>個人事業や小規模な会社だと、厳しいことを言ってくれる人もいないと思います。自分一人だとつい怠けてしまう人ほど、覚悟を決めて申し込んで欲しいですね。</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="sec">
+    <h3>こんな方におすすめです</h3>
+    <ul class="pain-list">
+      <li>自社商品やサービスがあって、オンラインでもっと売りたい</li>
+      <li>SNSは続けているが、仕組みとして機能していない</li>
+      <li>価値観の合うお客さんとの付き合いを増やしたい（価値観の合う人との縁、採用などを実現したい）</li>
+      <li>月商50〜300万円くらいで、オンラインの比率を上げたい</li>
+      <li>厳しいことでも正面からきちんと伝えて欲しい人</li>
+    </ul>
+
+    <div class="cta-block">
+      <a href="https://lin.ee/rLsdO8vc" target="_blank" rel="noopener" class="cta-btn">LINEで相談する</a>
+      <p class="cta-caption">メディア設計についてまず話してみたい方はこちら</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════════════════
+       LP3: マーケティング顧問 (from lp-marketing-advisor.html)
+  ══════════════════════════════════════════════════ -->
+
+  <section class="sec" id="advisor">
+    <p class="sec__en">ADVISOR</p>
+    <h2 class="sec__title">マーケティング顧問</h2>
+    <p class="sec__lead">言ってることとやってることを一致させたい人だけが来てください。</p>
+
+    <div class="photo-block">
+      <img src="https://static.wixstatic.com/media/fbfa5e_8b636ee73b0c463fb852bbf4c3394854~mv2.jpg" alt="地元の人と話すさかえる" loading="lazy">
+    </div>
+
+    <h3>「目標を立てて、今週これをやる」と決めたのにやらない</h3>
+
+    <p>やらなくてもなんとなくギリギリ生きていけてるから、まあ大丈夫かと何ヶ月も、何年も変わっていない、変わらない。</p>
+
+    <p><strong>そういうことをいい加減やめたい、と思ってる人だけが来てください。</strong></p>
+
+    <p>本気で自分の事業を伸ばしたい、言ってるだけでなくやってることで本気度を見せてくれる人以外は来ないでください。</p>
+
+    <p>正直なところわし自身も、本業は漁業なのでコンサルティングは本業の傍ら、漁業農業などの現場仕事のリスクヘッジの一つとして取り組んでいることであったりします。<br><strong>たくさんの人や会社を相手にすることは物理的に不可能</strong>なので、お互いの本業を伸ばすことで刺激し合える仲間になれる人とだけやり取りをしたいです。</p>
+
+    <p>キレイな絵図、計画を立てれば助成金が降りるかもしれない。<br>それっぽい新規事業の案を考えれば補助金が降りるかもしれない。<br>そんなことばかり考えていませんか？</p>
+
+    <p>自分自身が本当に大切なお客さんに囲まれて、<br>自分の仕事でそういう人たちに喜んでもらう、<br>そうして得られる対価でメシを食う。<br><strong>そういうメシはやっぱり美味いじゃないですか。</strong></p>
+
+    <p>そのためには毎日、毎週、毎月、自らやるべきことを決め、<br>調子のいい言葉ではなく<strong>実際にやることでしか掴み取ることはできません</strong>。</p>
+  </section>
+
+  <hr class="divider">
+
+  <section class="sec sec--cream">
+    <h3>変わらないのは仕組みがないから</h3>
+
+    <p>「今週何をやるか」を決めて、「来週それをやったか確認される」という環境がないから続かないんです。</p>
+
+    <p>人間は<strong>締め切りと確認がないと動きません</strong>。これは性格の問題じゃなくて、仕組みの問題です。</p>
+
+    <p>わし自身、その辺にいたただのサラリーマンが2018年に脱サラ地方移住を決意し、そこから毎週「先週できたこと、できなかったこと」を振り返り、「来週何をするのか」を決める。<br><strong>その精一杯の背伸びの繰り返しを7年間、350回以上続けているだけの凡人</strong>です。</p>
+
+    <p>「石の上にも3年」の正体は、毎週欠かさず振り返りと改善を<br><strong>50回×3年＝150回繰り返してから絶望せよ</strong>、ということなのではないでしょうか。<br>大抵の人は、夢を諦めるのに3年早いと思っています。</p>
+
+    <p>特別な才能があるわけじゃない人間は、<strong>ただただ誰でも思いつくことをちゃんとやるしか理想に近づく方法はありません</strong>。<br>時代の変化にのまれないように今でも毎週やっているし、それを100回も繰り返していない人から簡単に背中を捉えられちゃあ、立つ瀬がないです。</p>
+
+    <p>ストイックだからできる、のではなくて、人間誰しも情けなくて、俗っぽく、誘惑に弱くてポンコツだからこそ仕組みで解決する、そんな必要があると思いませんか。</p>
+  </section>
+
+  <hr class="divider">
+
+  <section class="sec">
+    <h3>このサービスの核心は「毎週のPDCA」</h3>
+
+    <div class="pdca-box">
+      <p class="pdca-box__title">毎週やること</p>
+      <ul>
+        <li>先週やると決めたことを、やったかどうか確認する</li>
+        <li>うまくいったこと・いかなかったことを一緒に振り返る</li>
+        <li>今週やることを決める</li>
+        <li>戦略や設計が間違っていれば、そこから直す</li>
+      </ul>
+    </div>
+
+    <p>これだけです。シンプルだけど、<strong>毎週これをやり続けると事業は確実に動きます。</strong></p>
+
+    <p>アドバイスは「正しいこと」より「今週実行できること」を優先して話します。</p>
+  </section>
+
+  <hr class="divider">
+
+  <section class="sec sec--cream">
+    <h3>顧問に入ったらできること</h3>
+
+    <ul class="pain-list">
+      <li>
+        <strong>1. SNSよりも先にやるべき「設計」を整える</strong><br>
+        <span style="font-size:14px; color:#666;">SNSを活用する前にやれることができていない人が多いです。認知は後からいくらでも獲得できる時代です。まずは「認知を獲得する前にできる設計」を整えるのがメインになります。具体的には、3種類のメディア（コンテンツ・コンバージョン・ブランディング）をあなたの事業に当てはめる「メディア設計」から始めることが多いです。</span>
+      </li>
+      <li>
+        <strong>2. 財務・資金繰りの視点も一緒に持つ</strong><br>
+        <span style="font-size:14px; color:#666;">マーケティングの話だけするつもりはありません。売上を伸ばしながら手元にお金が残る状態をつくるために、財務や資金繰りの観点からもアドバイスします。</span>
+      </li>
+      <li>
+        <strong>3. 新規事業の相談にも乗る</strong><br>
+        <span style="font-size:14px; color:#666;">SNSやオンラインを活用したい方、オンラインでの発信を最小限にしつつお客さんとの縁を増やしたい方、新規事業を作りたい方。相談内容は問いません。</span>
+      </li>
+      <li>
+        <strong>4. 成果が出ないものをダラダラと続けない</strong><br>
+        <span style="font-size:14px; color:#666;">顧問に入ったことで月額費用以上の効果を得られないと判断した場合は、わしの方から契約をお断りします。最初から決めていることです。</span>
+      </li>
+    </ul>
+  </section>
+
+  <hr class="divider">
+
+  <section class="sec">
+    <h3>ぜひやり取りさせていただきたい人</h3>
+    <ul class="target-list">
+      <li>本気で事業を伸ばしたくて、言ってることとやってることを一致させたい人</li>
+      <li>アドバイスをもらったら、すぐ動く人。「やってません」を2週続けない覚悟を持っている人</li>
+      <li>SNSより先に「仕組み」を整えたいと感じている人</li>
+    </ul>
+
+    <h3 style="margin-top: 32px;">こんな方はご遠慮ください</h3>
+    <ul class="target-list">
+      <li>補助金・助成金のための計画書づくりが目的の人</li>
+      <li>「やろうと思っています」が何ヶ月も続いている人</li>
+      <li>計画を立てることがゴールになっている人</li>
+    </ul>
+
+    <p style="margin-top: 24px;">自分のお客さんに囲まれて、自分の仕事でその人たちに喜んでもらい、そうして得られる対価でメシを食う。そのためには毎日・毎週・毎月、自らやるべきことを決め、<strong>実際にやることでしか掴み取れません。</strong></p>
+
+    <div class="cta-block">
+      <a href="https://lin.ee/rLsdO8vc" target="_blank" rel="noopener" class="cta-btn">LINEで相談する</a>
+      <p class="cta-caption">顧問サービスについて相談したい方はこちら</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════════════════
+       ABOUT (shared)
+  ══════════════════════════════════════════════════ -->
+
+  <section class="sec sec--cream" id="about">
+    <p class="sec__en">ABOUT</p>
+    <h2 class="sec__title">さかえるについて</h2>
+
+    <div class="profile-row">
+      <img src="https://static.wixstatic.com/media/fbfa5e_f762bcb66f7d4b1ab612a4f5697cc1e3~mv2.jpg" alt="さかえるプロフィール" class="profile-row__img">
+      <div class="profile-row__text">
+        <p class="profile-row__name">さかえる</p>
+        <p class="profile-row__sub">ひじき漁師 / マーケティング顧問<br>山口県周防大島町沖家室島</p>
+      </div>
+    </div>
+
+    <p>本業は漁師です。<br>山口県の離島・沖家室島で年間約50トンのひじきを獲っています。<br>組合員として漁獲量も確保しつつそのうち1日分の良質なひじきのみを厳選して加工し、沖家室ひじきとしてECで販売しております。</p>
+
+    <p>マーケティングも頑張ってはいますが、根本は<strong>良質なものづくり・商品サービスづくりがあればそれ自体が最良のマーケティング</strong>だよな、という思いも強いです。</p>
+
+    <div class="num-row">
+      <div class="num-item">
+        <p class="num-item__val">50t</p>
+        <p class="num-item__label">年間ひじき収穫量<br>（1次産業の現場での労働生産性を上げるための計画づくりもサポート可能です）</p>
+      </div>
+      <div class="num-item">
+        <p class="num-item__val">70-80万</p>
+        <p class="num-item__label">EC月商<br>単一商品での中央値<br>（最大350万円/月）</p>
+      </div>
+      <div class="num-item">
+        <p class="num-item__val">90-500万</p>
+        <p class="num-item__label">1次産業含む月収<br>（季節ごとに収益の波あり）</p>
+      </div>
+    </div>
+
+    <p>（自慢みたいになってしまっていますが、こういうのって実績載せとかないと「ところでお前はどうなんだ」と思うじゃないですか。すみません一応です。）</p>
+
+    <p>小さな事業の売り出し方、続け方を、同じように自分の商品や技術を届けたい人に向けて共有しています。<br><small style="color:#666;">（と言いつつ、自分自身も必死に試行錯誤中ですしコンサルティングを受けながら毎週改善を重ねています。一緒に頑張りましょう！）</small></p>
+
+    <!-- アクセント写真 -->
+    <div class="photo-block">
+      <img src="https://static.wixstatic.com/media/fbfa5e_9b9f1aa03d704e439955543809559188~mv2.jpg" alt="大釜を持つさかえる" loading="lazy">
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ──── サイト制作・動画制作（おまけ的に小さく） ──── -->
+  <section class="sec">
+    <h3>サイトや動画の制作も承ります</h3>
+
+    <p><strong>サイト制作</strong> ── 商品の魅力を正しく伝え、購入・問い合わせまでの導線を設計したLPやサイトを作ります。</p>
+
+    <p><strong>動画制作</strong> ── リール用のショート動画から商品紹介・インタビュー動画まで（12〜5月の漁期外であれば柔軟に対応できることがあります。ご相談ください）。</p>
+
+    <p><strong>AI活用サポート</strong> ── ChatGPTなどのAIを使った業務効率化のお手伝いをします。「AIって聞いたことあるけど何から始めればいいかわからない」という方へ。チームへの指示出しの自動化、議事録・報告書の作成、SNS投稿文の下書きなど、日々の作業をAIに任せる仕組みを一緒に作ります。</p>
+
+    <h4 style="margin-top:24px; font-size:15px;">さかえるはAIが毎日、自分の代わりに働いています</h4>
+    <ul class="pain-list" style="margin-top:12px;">
+      <li>毎朝6時、チームの全チャットを読んで重要事項を自動でまとめる</li>
+      <li>補助金申請書類の下書きを5分で作成</li>
+      <li>ノルマの進捗を毎日チェックして自動で声かけ</li>
+      <li>毎週の業績レポートを自動生成して提出</li>
+      <li>お客さんへの返信文、台本、企画書もAIが下書き</li>
+    </ul>
+    <p>分身として動くAIの仕組みの構築もサポートできます。</p>
+
+    <!-- 作業風景写真 -->
+    <div class="photo-block">
+      <img src="https://static.wixstatic.com/media/fbfa5e_86575f14e6bb4d539321105e9020e727~mv2.jpg" alt="ひじきの天日干し作業" loading="lazy">
+    </div>
+
+    <p style="font-size:13px; color:#666;">内容に応じてお見積りします。まずはLINEでご相談ください。</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════════════════
+       PLAN (shared pricing)
+  ══════════════════════════════════════════════════ -->
+
+  <section class="sec sec--cream" id="plan">
+    <p class="sec__en">PLAN</p>
+    <h2 class="sec__title">料金プラン</h2>
+    <p class="sec__lead">毎週のPDCAがこのマーケティング顧問サービスの肝です。</p>
+
+    <div class="price-group">
+      <p class="price-group__title">まず相談したい（まず相談プラン）</p>
+      <p class="price-group__sub">気軽にLINEからご連絡ください（1週間は無料です）。</p>
+
+      <div class="price-row">
+        <div class="label">いつでもLINE相談（1週間経過後）<small>チャットでいつでも返信します ※下記スケジュールも参照してください</small></div>
+        <div class="price">5,500円/月</div>
+      </div>
+      <div class="price-row">
+        <div class="label">初回面談（40分）<small>ニーズ確認の打ち合わせ。沖家室ひじきの取引先（卸先）の方は無償で、常連の方は半額で対応します。</small></div>
+        <div class="price">55,000円</div>
+      </div>
+      <div class="price-row">
+        <div class="label">半日拘束プラン<small>メディア設計・事業計画セカンドオピニオン等。事前にLINE相談が必要。オンラインの場合は、沖家室ひじきの取引先または常連の方は無料で対応します</small></div>
+        <div class="price">77,000円/回</div>
+      </div>
+    </div>
+
+    <div class="price-group price-group--main">
+      <p class="price-group__title price-group__title--main">継続して回したい（マーケティング顧問プラン）</p>
+
+      <div class="price-row">
+        <div class="label">梅<small>LINE・チャット相談 + コミュニティ招待</small></div>
+        <div class="price">11,000円/月</div>
+      </div>
+      <div class="price-row">
+        <div class="label">竹<small>梅 + オンラインMTG 1回/月</small></div>
+        <div class="price">33,000円/月</div>
+      </div>
+      <div class="price-row">
+        <div class="label"><strong>松</strong><span class="recommend-badge">本体</span><small>竹 + 毎週PDCAミーティング。限定5枠（残3枠）</small></div>
+        <div class="price">55,000円/月</div>
+      </div>
+      <div class="price-row">
+        <div class="label">顧問プラス<small>チームでの実稼働・スタッフ育成込み。2枠のみ</small></div>
+        <div class="price">165,000円〜/月</div>
+      </div>
+    </div>
+
+    <div class="price-group">
+      <p class="price-group__title">制作・講演</p>
+
+      <div class="price-row">
+        <div class="label">サイト制作・動画制作、AI構築支援<small>まず相談プランまたは顧問プランの方限定です。</small></div>
+        <div class="price">要相談</div>
+      </div>
+      <div class="price-row">
+        <div class="label">講演・研修<small>オンラインの場合は55,000円/時間〜柔軟に対応可能です。対面は5月下旬〜11月に限ります。</small></div>
+        <div class="price">77,000円/日〜</div>
+      </div>
+    </div>
+
+    <p class="price-note">沖家室ひじきの取引先は竹プランが無料です。訪問ありの場合は別途1万円/回です。</p>
+
+    <div class="cta-block">
+      <a href="https://lin.ee/rLsdO8vc" target="_blank" rel="noopener" class="cta-btn">LINEで相談する</a>
+      <p class="cta-caption">いきなり申し込む必要はありません。現状を聞かせてもらえれば、どのプランが合うか一緒に考えます。</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════════════════
+       CALENDAR (shared)
+  ══════════════════════════════════════════════════ -->
+
+  <section class="sec sec--cream" id="calendar">
+    <p class="sec__en">CALENDAR</p>
+    <h2 class="sec__title">対応可能な時期</h2>
+    <p class="sec__lead">本業が漁師なので、時期によって対応スピードが変わります。</p>
+
+    <div class="cal-chart">
+      <div class="cal-months">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+      </div>
+      <div class="cal-bars">
+        <div class="cal-bar cal-bar--busy cal-row-busy-1">遅れがち</div>
+        <div class="cal-bar cal-bar--mid cal-row-mid">概ね可</div>
+        <div class="cal-bar cal-bar--free cal-row-free">すぐ対応できます</div>
+        <div class="cal-bar cal-bar--busy cal-row-busy-2">遅れがち</div>
+      </div>
+    </div>
+
+    <dl class="cal-desc">
+      <dt class="dt-free">5〜11月上旬 ── すぐ対応できます</dt>
+      <dd>顧問ミーティング・メディア設計・講演など、すべてのサービスにスムーズに対応できる時期です。新規のご相談もこの時期がおすすめです。</dd>
+
+      <dt class="dt-mid">3〜4月 ── 概ね対応可能です</dt>
+      <dd>ひじき漁は続いていますが、日中の潮次第で柔軟に動けます。オンラインでの顧問ミーティングは通常通り対応できます。</dd>
+
+      <dt class="dt-busy">11月中旬〜2月 ── さかえるからの返信が遅れることがあります</dt>
+      <dd>夜中のひじき漁でピリピリしている時期です。さかえる本人からのLINEやチャットの返信に時間がかかる場合があります。ただしスタッフも一緒に対応しますので、お急ぎの場合はそちらで対応いたします。顧問契約中の方のミーティングは極力維持します。新規のご相談はLINEでお気軽にどうぞ。</dd>
+    </dl>
+
+    <p style="margin-top: 16px; font-size: 13px; color: #888;">どの時期でも、まずはLINEでご連絡ください。状況に応じて対応します。</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════════════════
+       FAQ (merged from all 3 LPs)
+  ══════════════════════════════════════════════════ -->
+
+  <section class="sec" id="faq">
+    <p class="sec__en">FAQ</p>
+    <h2 class="sec__title">よくある質問</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">SNSのフォロワーが少なくても大丈夫？事業を始めたばかりでも申し込める？</p>
+      <p class="faq-a">大丈夫です。むしろフォロワーが少ないうちに、事業の初期段階でメディア設計を整えておくと、後から伸びたときに活きますし、無駄な回り道をしなくて済みます。ただし、計画、実行、改善の基準値が低い方はご遠慮ください（多少スパルタ、きついことを言われても頑張るぞ、という方は大歓迎です。一緒に頑張りましょう！）。<br>こちらを参考にしてください↓</p>
+      <a href="https://note.com/sakaeruman/n/n3be5116c526c" target="_blank" rel="noopener" style="display:block; margin-top:8px; padding:12px; border:1px solid #e0ddd8; text-decoration:none; color:#1a1a1a; font-size:13px; line-height:1.5;">
+        <strong style="color:#1E3A5F;">📝 大抵の人は、夢を諦めるのに3年早い。</strong><br>
+        <span style="color:#888;">note.com/sakaeruman</span>
+      </a>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">業種・地域は問う？</p>
+      <p class="faq-a">問いません。ただし「月商50〜300万円規模の小さな商売」が前提です。記載のない規模やご相談はまずLINEでお願いします（〜数億円規模のマーケティングコンサルティングや財務資金繰り、経営計画作成の支援等も実績はございます。必要に応じてチームで対応します）。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">どれくらいで成果が出る？途中で解約できる？</p>
+      <p class="faq-a">設計が整うまで2〜3ヶ月、数字に出てくるまで6ヶ月が目安です。毎週改善を重ねて6ヶ月で成果が出ないなら、そもそもの設計が間違っています（毎週一緒に決めたことを実行することが前提です。「今週はできませんでした」が重なる人はそもそも成果は出ません）。途中解約はできます。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">PDCAミーティングはどのくらいの時間？</p>
+      <p class="faq-a">30分〜1時間です。毎週続けることが大事なので、長くならないようにしていますが個別に相談しつつ進めていきましょう。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">オンラインだけでも依頼できる？</p>
+      <p class="faq-a">できます。訪問ありの場合は別途交通費等をお願いしております。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">メディア設計だけお願いしたい</p>
+      <p class="faq-a">半日拘束プラン（77,000円/回）で対応します。事前にLINE相談プランでやり取りしてからの申し込みになります。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">さかえる怖くない？</p>
+      <p class="faq-a">（すんげえ厳しくてストイックなやつ、に見えるかもしれませんし色々偉そうに言ってますが結構さかえる自身もポンコツでうっかり者ですのでご安心ください）</p>
+      <p class="faq-a">ただし、ビジネスのやり取りをする上で言っていることとやっていることが一致しない人には厳しいです。オンライン事業よりも圧倒的にひじき漁の収入の方が大きいこともあり、契約者の方の機嫌を取ることも、変に忖度することも、歯に衣を着せることもありません。そういう意味では相性はあると思います。</p>
+      <p class="faq-a">普段の様子はYouTube「ひじき漁師さかえる」の動画を見ていただくと人柄やどんな様子なのかはおわかりいただけると思います。ぜひご覧ください！</p>
+      <p class="faq-a">まずはひじき漁師さかえるの情報発信やVoicyなどを見聞きしてもらう中で「こいつ一緒に切磋琢磨したい！」と思ってからご連絡いただく、といいのかなと思ってます！</p>
+      <div class="yt-embed" style="margin-top:12px;"><iframe width="100%" height="auto" style="aspect-ratio:16/9;" src="https://www.youtube.com/embed/A5rP_Mid5vs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <a href="https://www.sakaeru.online/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:14px; margin-top:16px; padding:16px 18px; background:#fff !important; border:1px solid #e0ddd8; text-decoration:none; color:#1a1a1a !important; font-size:14px; line-height:1.5;">
+        <img src="https://static.wixstatic.com/media/fbfa5e_f762bcb66f7d4b1ab612a4f5697cc1e3~mv2.jpg" alt="さかえる" style="width:52px; height:52px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+        <span style="color:#1a1a1a;">
+          <strong style="font-size:15px; color:#1E3A5F;">さかえるについてもっと知る</strong><br>
+          <span style="font-size:12px; color:#999;">www.sakaeru.online</span>
+        </span>
+        <span style="margin-left:auto; font-size:18px; color:#ccc;">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ──── FOOTER CTA ──── -->
+  <section class="footer-cta">
+    <h2>まず、話してみてください。</h2>
+    <p>LINEで相談するところから始めてみてください。</p>
+    <a href="https://lin.ee/rLsdO8vc" target="_blank" rel="noopener" class="cta-btn">LINEで相談する</a>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/sakaeruman/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/sakaeruman/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.sakaeru.online/" target="_blank" rel="noopener">公式サイト</a>
+    </div>
+  </section>
+
+</div><!-- /content-column -->
+</main>
+
+</div><!-- /layout -->
+
+<!-- Smooth scroll -->
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+<!-- Wix iframe responsive fix: detect actual container width, not viewport -->
+<script>
+(function() {
+  var BREAKPOINT = 960;
+  function applyLayout() {
+    var w = document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
+    if (w < BREAKPOINT) {
+      document.documentElement.classList.add('is-mobile');
+    } else {
+      document.documentElement.classList.remove('is-mobile');
+    }
+  }
+  applyLayout();
+  window.addEventListener('resize', applyLayout);
+})();
+</script>
+
+</body>
+</html>
