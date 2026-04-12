@@ -495,26 +495,25 @@
 
   /* ── Numbers ── */
   .num-row {
-    display: flex;
-    gap: 16px;
-    margin: 20px 0;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 16px;
+    margin: 16px 0;
   }
   .num-item {
-    flex: 1;
-    min-width: 120px;
     border-left: 2px solid #1E3A5F;
-    padding-left: 12px;
+    padding: 4px 0 4px 10px;
   }
   .num-item__val {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     color: #1E3A5F;
     line-height: 1.2;
   }
   .num-item__label {
-    font-size: 12px;
+    font-size: 11px;
     color: #666;
+    line-height: 1.4;
   }
 
   /* ── Pricing ── */
@@ -849,7 +848,7 @@
   html.is-mobile .photo-block { margin: 20px -20px !important; }
   html.is-mobile .profile-row { flex-direction: column !important; gap: 16px !important; }
   html.is-mobile .profile-row__img { width: 100% !important; height: 200px !important; }
-  html.is-mobile .num-row { flex-direction: column !important; gap: 12px !important; }
+  html.is-mobile .num-row { grid-template-columns: 1fr 1fr !important; gap: 8px 12px !important; }
 
   @media print {
     .side-nav {
@@ -879,7 +878,7 @@
     .photo-block { margin: 20px -20px; }
     .profile-row { flex-direction: column; gap: 16px; }
     .profile-row__img { width: 100%; height: 200px; }
-    .num-row { flex-direction: column; gap: 12px; }
+    .num-row { grid-template-columns: 1fr 1fr; gap: 8px 12px; }
   }
 </style>
 </head>
@@ -1349,16 +1348,24 @@
 
     <div class="num-row">
       <div class="num-item">
-        <p class="num-item__val">50t</p>
-        <p class="num-item__label">年間ひじき収穫量<br>（1次産業の現場での労働生産性を上げるための計画づくりもサポート可能です）</p>
+        <p class="num-item__val">55t</p>
+        <p class="num-item__label">年間ひじき収穫量</p>
       </div>
       <div class="num-item">
         <p class="num-item__val">70-80万</p>
-        <p class="num-item__label">EC月商<br>単一商品での中央値<br>（最大350万円/月）</p>
+        <p class="num-item__label">EC月商（単一商品中央値）</p>
       </div>
       <div class="num-item">
         <p class="num-item__val">90-500万</p>
-        <p class="num-item__label">1次産業含む月収<br>（季節ごとに収益の波あり）</p>
+        <p class="num-item__label">1次産業含む月収</p>
+      </div>
+      <div class="num-item">
+        <p class="num-item__val">25,000</p>
+        <p class="num-item__label">Instagramフォロワー</p>
+      </div>
+      <div class="num-item">
+        <p class="num-item__val">9,000</p>
+        <p class="num-item__label">Facebookフォロワー</p>
       </div>
     </div>
 
