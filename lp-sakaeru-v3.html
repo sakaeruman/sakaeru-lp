@@ -849,7 +849,10 @@
   html.is-mobile .photo-block { margin: 20px -20px !important; }
   html.is-mobile .profile-row { flex-direction: column !important; gap: 16px !important; }
   html.is-mobile .profile-row__img { width: 100% !important; height: 200px !important; }
-  html.is-mobile .num-row { flex-direction: column !important; gap: 12px !important; }
+  html.is-mobile .num-row { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; flex-direction: unset !important; }
+  html.is-mobile .num-item { min-width: unset !important; padding: 8px 10px !important; }
+  html.is-mobile .num-item__val { font-size: 18px !important; }
+  html.is-mobile .num-item__label { font-size: 11px !important; }
 
   @media print {
     .side-nav {
@@ -879,7 +882,10 @@
     .photo-block { margin: 20px -20px; }
     .profile-row { flex-direction: column; gap: 16px; }
     .profile-row__img { width: 100%; height: 200px; }
-    .num-row { flex-direction: column; gap: 12px; }
+    .num-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .num-item { min-width: unset; padding: 8px 10px; }
+    .num-item__val { font-size: 18px; }
+    .num-item__label { font-size: 11px; }
   }
 </style>
 </head>
@@ -1349,16 +1355,24 @@
 
     <div class="num-row">
       <div class="num-item">
-        <p class="num-item__val">50t</p>
-        <p class="num-item__label">年間ひじき収穫量<br>（1次産業の現場での労働生産性を上げるための計画づくりもサポート可能です）</p>
+        <p class="num-item__val">55t</p>
+        <p class="num-item__label">年間ひじき漁獲量</p>
       </div>
       <div class="num-item">
         <p class="num-item__val">70-80万</p>
-        <p class="num-item__label">EC月商<br>単一商品での中央値<br>（最大350万円/月）</p>
+        <p class="num-item__label">EC月商<br><small>単一商品・中央値</small></p>
       </div>
       <div class="num-item">
         <p class="num-item__val">90-500万</p>
-        <p class="num-item__label">1次産業含む月収<br>（季節ごとに収益の波あり）</p>
+        <p class="num-item__label">1次産業含む月収</p>
+      </div>
+      <div class="num-item">
+        <p class="num-item__val">25,000</p>
+        <p class="num-item__label">Instagramフォロワー</p>
+      </div>
+      <div class="num-item">
+        <p class="num-item__val">9,000</p>
+        <p class="num-item__label">Facebookフォロワー</p>
       </div>
     </div>
 
