@@ -803,7 +803,8 @@
      RESPONSIVE
   ══════════════════════════════════════ */
 
-  @media (max-width: 960px) {
+  /* タブレット〜スマホ: 1カラム表示（1024px未満） */
+  @media (max-width: 1023px) {
     .side-nav { display: none; }
     .mobile-header { display: flex; }
     .content-header { display: none; }
@@ -821,6 +822,19 @@
       border-radius: 0;
       box-shadow: none;
     }
+    img { width: 100%; }
+  }
+
+  /* タブレット幅（768〜1023px）専用調整 */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .sec { padding: 56px 24px; }
+    .sec--80 { padding-top: 64px; padding-bottom: 64px; }
+    .sec__title { font-size: 21px; }
+    .hero__img { height: 320px; }
+    .hero h1 { font-size: 21px; }
+    .hero__overlay { padding: 44px 24px 28px; }
+    .photo-block { margin: 24px -24px; }
+    .photo-block img { height: 260px; width: 100%; }
   }
 
   /* JS-based mobile class (Wix iframe fallback: screen.width detects actual device, not iframe) */
